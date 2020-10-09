@@ -1,0 +1,33 @@
+
+<div>
+    <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+        <p-header>
+            <h3>Circular, AutoPlay, 3 Items per Page and Scroll by 1</h3>
+        </p-header>
+        <ng-template let-products pTemplate="item">
+            <div class="car-details">
+                <div class="p-grid p-nogutter">
+                    <div class="p-col-12 car-data">
+                        <p-card styleClass="p-card-shadow">
+                            <img src={{products.imagen}} alt="Laptop" [style]="{'width': '20rem'}">
+                            <p-header>
+                                <div class="container" [style]="{'width': '20rem', 'height': '4rem'}">
+                                    <h2>{{products.producto}}</h2>
+                                </div>
+                                <div class="car-subtitle">{{products.caracteristicas}}</div>
+                            </p-header>
+                            <div><h4>$ {{products.precio}}</h4></div>
+
+                            <div class="car-buttons" [style]="{'text-align':'center'}">
+                                <button pButton type="button" class="ui-button-secondary" icon="pi pi-search"></button>
+                                <button pButton type="button" class="ui-button-secondary" icon="pi pi-star"></button>
+                                <button pButton type="button" class="ui-button-secondary" icon="pi pi-cog"></button>
+                                <button pButton type="button" icon="pi pi-shopping-cart" class="p-button-raised"></button>
+                            </div>
+                        </p-card>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

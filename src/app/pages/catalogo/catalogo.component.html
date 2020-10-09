@@ -1,0 +1,21 @@
+
+<div>
+    <div class="card p-grid">
+        <p-card *ngFor="let product of products" header={{product.producto}} subheader={{product.caracteristicas}} [style]="{'width': '20rem', 'height': '30rem', 'margin': '1em'}" styleClass="p-card-shadow">
+            <p-header>
+                <img src={{product.imagen}} alt="Laptop">
+            </p-header>
+
+            <div class="p-mr-2 p-d-inline" [style]="{'text-align':'left'}">$ {{product.precio}}</div>
+                
+            <div class="car-buttons p-d-inline" [style]="{'text-align':'end'}">
+                <button pButton type="button" icon="pi pi-shopping-cart" class="p-button-raised"></button>
+            </div>
+            
+            
+            <div [style]="{'text-align':'right'}">
+                <p class="p-mr-2 p-d-inline">{{carrito}}</p>
+            </div>
+        </p-card>
+    </div>
+</div>
